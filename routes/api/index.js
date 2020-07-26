@@ -2,6 +2,7 @@ const router = require('express').Router();
 
 const userRoutes = require('./user-routes');
 const postRoutes = require('./post-routes');
+const commentRoutes = require('./comment-routes');
 
 router.use('/users', userRoutes);
 //Remember how in user-routes.js we didn't use the word users in any routes? 
@@ -9,6 +10,7 @@ router.use('/users', userRoutes);
 // prefixing them with the path /users at that time.
 
 router.use('/posts', postRoutes);
+router.use('/comments', commentRoutes);
 
 module.exports = router;
 
