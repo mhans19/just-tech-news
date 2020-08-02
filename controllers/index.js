@@ -2,6 +2,14 @@ const router = require('express').Router();
 
 const apiRoutes = require('./api');
 
+const homeRoutes = require('./home-routes.js');
+
+const dashboardRoutes = require('./dashboard-routes.js');
+
+router.use('/dashboard', dashboardRoutes);
+
+router.use('/', homeRoutes);
+
 router.use('/api', apiRoutes);
 // Much like the API folder's index.js file that collects 
 // the endpoints and prefixes them, here we are collecting 
